@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="block_text">
+        <input class="input_txt" type="text" [(ngModel)]="movieTitle" placeholder=" Movie name"/>
+        <button class="btn" (click)="getMovieInfo()">Search</button>
+    </div>
+    
+    <div *ngIf="movieInfo" class="block_info">
+        <h2>{{ movieInfo.Title }}</h2>
+        <p>Год выпуска: {{ movieInfo.Year }}</p>
+        <p>Рейтинг: {{ movieInfo.imdbRating }}</p>
+        <p>Длительность: {{ movieInfo.Runtime }}</p>
+        <p>Режиссер: {{ movieInfo.Director }}</p>
+        <p>Актерский состав: {{ movieInfo.Actors }}</p>
+    </div>
+</div>
